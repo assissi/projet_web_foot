@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THIS IS HERITAGE</title>
-<link rel ="stylesheet" href="../css/accueil.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THIS IS HERITAGE</title>
+  <link rel ="stylesheet" href="../css/accueil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <div class="nav_bar">
-    <img src="../img/logo_projet_web.png" alt="Logo">
+    <a href="../heritage/accueil.html"><img src="../img/logo_projet_web.png" alt="Logo"></a>
     <h1>HERITAGE</h1>
     <div class="buttons">
-      <a href="../heritage/champs_d'action.html" target="_blank">Champs d'action</a>
-      <a href="../heritage/à_propos.html" target="_blank">à propos</a>
+      <a href="../heritage/messi.html">Champs d'action</a>
+      <a href="../heritage/à_propos.html">à propos</a>
     </div>
   </div>
   
@@ -64,7 +65,7 @@
   </div>
 
   <div class="grille-images">
-    <a href="messi.html" class="grille-item">
+    <a href="../heritage/messi.html" class="grille-item">
       <img src="../img/messi.png" alt="Messi">
       <span class="grille-texte">LIONEL MESSI</span>
     </a>
@@ -78,19 +79,16 @@
     </a>
   </div>
 
-  <div class="footer-button">
-    <a href="https://www.agenda-2030.fr/17-objectifs-de-developpement-durable/" target="_blank">Les ODD</a>
-  </div>
-</div>
+  
 <footer class="footer-global">
   <div class="footer-social">
     <h2>Rejoignez-nous Sur Les Réseaux Sociaux</h2>
     <div class="footer-icons">
       <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-        <img src="../img/instagram.svg" alt="Instagram" class="footer-icon" />
+        <i class="fab fa-instagram fa-2x"></i>
       </a>
       <a href="https://x.com" target="_blank" aria-label="X (Twitter)">
-        <img src="../img/x.svg" alt="X" class="footer-icon" />
+        <i class="fab fa-x-twitter fa-2x"></i>
       </a>
     </div>
   </div>
@@ -105,10 +103,47 @@
     <div class="footer-col">
       <h3>S'engager</h3>
       <ul>
-        <li><a href="#">Faire un don</a></li>
+        <li><a href="../heritage/engager.html">Faire un don</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>En savoir plus</h3>
+      <ul>
+        <li><a href="https://www.agenda-2030.fr/17-objectifs-de-developpement-durable/" target="_blank">Les ODD</a></li>
       </ul>
     </div>
   </div>
 </footer>
+<div class="footer-copyright">
+  © 2025 Heritage
+</div>
+
+<!-- Template pour la modale de réduction d'impôts -->
+<template id="reduction-impot-modal-template">
+  <div class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3>Nous avons besoin de vous</h3>
+      <hr class="modal-hr">
+      <p>Aidez les organismes du football et du sport dans leurs actions pour le développement durable.</p>
+      <a href="../heritage/engager.html" class="modal-button">JE FAIS UN DON</a>
+    </div>
+  </div>
+</template>
+
+<!-- Template pour la deuxième modale -->
+<template id="deuxieme-modal-template">
+  <div class="modal-overlay-left">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <!-- Ton contenu pour la deuxième modale ici -->
+      <h3>Deuxième Modale</h3>
+      <p>Ce texte peut être modifié.</p>
+    </div>
+  </div>
+</template>
+
+<script src="../js/accueil_modal.js"></script> 
+
 </body>
 </html>
