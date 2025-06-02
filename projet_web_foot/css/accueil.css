@@ -222,14 +222,17 @@ footer {
 .footer-icon {
   width: 48px;
   height: 48px;
-  opacity: 0.6;
-  transition: opacity 0.2s, transform 0.2s;
-  filter: grayscale(1);
+  opacity: 0.7;
+  filter: grayscale(1) brightness(0.7);
+  transition: opacity 0.2s, filter 0.2s, transform 0.2s;
 }
 .footer-icon:hover {
   opacity: 1;
-  filter: none;
+  filter: grayscale(1) brightness(0.5);
   transform: scale(1.1);
+}
+.footer-icons a {
+  color: inherit;
 }
 .footer-links {
   display: flex;
@@ -279,3 +282,133 @@ footer {
     text-align: center;
   }
 }
+
+.footer-copyright {
+  text-align: center;
+  padding: 20px 0;
+  background: #000;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+/* --- Modal Réduction Impôts --- */
+.modal-overlay {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
+    display: none; /* Cachée par défaut */
+    /* Pas de fond opaque plein écran */
+    /* Pas de backdrop-filter */
+    /* Pas de display: flex/justify/align pour le centrage global */
+}
+
+/* --- Deuxième Modale (Gauche) --- */
+.modal-overlay-left {
+    position: fixed;
+    bottom: 20px; /* Ou top: 20px; si tu préfères en haut à gauche */
+    left: 20px;
+    z-index: 2000;
+    display: none; /* Cachée par défaut */
+    /* Pas de fond opaque plein écran */
+    /* Pas de backdrop-filter */
+    /* Pas de display: flex/justify/align pour le centrage global */
+}
+
+.modal-content {
+    background: #111; /* Utiliser la même couleur de fond que le body */
+    padding: 30px 40px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    width: 90%; /* Peut-être ajuster */
+    max-width: 400px; /* Peut-être ajuster */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #eee;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    transition: background 0.2s, color 0.2s;
+}
+
+.modal-close:hover {
+    background: #ddd;
+    color: #555;
+}
+
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    margin: -70px auto 20px auto; /* Pour la position au-dessus */
+    background: #111;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    
+}
+
+.modal-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: Arial, sans-serif; 
+}
+
+.modal-hr {
+    width: 60px;
+    border: none;
+    border-top: 2px solid #555;
+    margin: 0 auto 20px auto;
+}
+
+.modal-content p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    color: #eee;
+}
+
+.modal-button {
+    background: white; 
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.modal-button:hover {
+    background: #7fff00; 
+    color: #fff; 
+}
+
+.modal-small-text {
+    font-size: 0.9em;
+    margin-top: 20px;
+    color: #ccc;
+}
+
