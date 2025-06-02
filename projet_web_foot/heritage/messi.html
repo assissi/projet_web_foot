@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lionel Messi</title>
+    <link rel="stylesheet" href="../css/messi.css">
+</head>
+<body>
+    <div class="nav_bar">
+        <img src="../img/logo_projet_web.png" alt="Logo">
+        <h1>Lionel Messi</h1>
+        <div class="buttons">
+          <a href="../heritage/à_propos.html">à_propos</a>
+          <a href="../heritage/accueil.html">accueil</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            
+            <!-- Marque-page 1 -->
+            <div class="bookmark left" data-content="content1">
+                <div class="bookmark-tag">2004</div>
+                <div class="content-box">
+                    <h3>Débuts professionnels</h3>
+                    <p>Débuts professionnels au FC Barcelone, marquant le début d'une carrière légendaire.</p>
+                </div>
+            </div>
+
+            <!-- Marque-page 2 -->
+            <div class="bookmark right" data-content="content2">
+                <div class="bookmark-tag">2009</div>
+                <div class="content-box">
+                    <h3>Premier Ballon d'Or</h3>
+                    <p>Remporte son premier Ballon d'Or et la Ligue des Champions avec le FC Barcelone.</p>
+                </div>
+            </div>
+
+            <!-- Marque-page 3 -->
+            <div class="bookmark left" data-content="content3">
+                <div class="bookmark-tag">2012</div>
+                <div class="content-box">
+                    <h3>Record de buts</h3>
+                    <p>91 buts en une année civile, établissant un nouveau record mondial.</p>
+                </div>
+            </div>
+
+            <!-- Marque-page 4 -->
+            <div class="bookmark right" data-content="content4">
+                <div class="bookmark-tag">2021</div>
+                <div class="content-box">
+                    <h3>Copa América</h3>
+                    <p>Premier titre majeur avec l'Argentine en remportant la Copa América.</p>
+                </div>
+            </div>
+
+            <!-- Marque-page 5 -->
+            <div class="bookmark left" data-content="content5">
+                <div class="bookmark-tag">2022</div>
+                <div class="content-box">
+                    <h3>Coupe du Monde</h3>
+                    <p>Victoire historique en Coupe du Monde avec l'Argentine.</p>
+                </div>
+            </div>
+
+            <!-- Section Quiz -->
+            <div class="quiz-intro">
+                <h2>Êtes-vous maintenant prêt à tester vos connaissances sur Lionel Messi ?</h2>
+                <p>Répondez aux questions suivantes.</p>
+                <a href="#quiz" class="quiz-button">Faire le quiz</a>
+            </div>
+        </div>
+
+        <!-- Section des questions -->
+        <div id="quiz" class="quiz-section">
+            <div class="quiz-container">
+                <form id="quiz-form">
+                    <div class="question">
+                        <h3>1. En quelle année Messi a-t-il fait ses débuts professionnels au FC Barcelone ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="2003"> 2003</label>
+                            <label><input type="radio" name="q1" value="2004"> 2004</label>
+                            <label><input type="radio" name="q1" value="2005"> 2005</label>
+                        </div>
+                        <button type="button" class="validate-button" data-question="q1" style="display: none;">Valider</button>
+                    </div>
+
+                    <div class="question">
+                        <h3>2. Quand a-t-il remporté son premier Ballon d'Or ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="2008"> 2008</label>
+                            <label><input type="radio" name="q2" value="2009"> 2009</label>
+                            <label><input type="radio" name="q2" value="2010"> 2010</label>
+                        </div>
+                        <button type="button" class="validate-button" data-question="q2" style="display: none;">Valider</button>
+                    </div>
+
+                    <div class="question">
+                        <h3>3. Combien de buts Messi a-t-il marqué en 2012, établissant un record ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q3" value="85"> 85 buts</label>
+                            <label><input type="radio" name="q3" value="91"> 91 buts</label>
+                            <label><input type="radio" name="q3" value="96"> 96 buts</label>
+                        </div>
+                        <button type="button" class="validate-button" data-question="q3" style="display: none;">Valider</button>
+                    </div>
+
+                    <div class="question">
+                        <h3>4. En quelle année Messi a-t-il remporté la Copa América avec l'Argentine ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q4" value="2019"> 2019</label>
+                            <label><input type="radio" name="q4" value="2020"> 2020</label>
+                            <label><input type="radio" name="q4" value="2021"> 2021</label>
+                        </div>
+                        <button type="button" class="validate-button" data-question="q4" style="display: none;">Valider</button>
+                    </div>
+
+                    <div class="question">
+                        <h3>5. Quand l'Argentine de Messi a-t-elle remporté la Coupe du Monde ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q5" value="2021"> 2021</label>
+                            <label><input type="radio" name="q5" value="2022"> 2022</label>
+                            <label><input type="radio" name="q5" value="2023"> 2023</label>
+                        </div>
+                        <button type="button" class="validate-button" data-question="q5" style="display: none;">Valider</button>
+                    </div>
+
+                    <div class="donation-section">
+                        <p>Soutenez les actions humanitaires de Lionel Messi</p>
+                        <a href="https://messi.com/en/fundacion-leo-messi/" class="donation-button" target="_blank">Faire un don</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/messi.js"></script>
+</body>
+</html>
