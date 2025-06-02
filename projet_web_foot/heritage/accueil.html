@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THIS IS HERITAGE</title>
 <link rel ="stylesheet" href="../css/accueil.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <div class="nav_bar">
     <img src="../img/logo_projet_web.png" alt="Logo">
     <h1>HERITAGE</h1>
     <div class="buttons">
-      <a href="../heritage/dons.html">Dons</a>
-      <a href="../heritage/à_propos.html" target="_blank">à propos</a>
+      <a href="#objectifs-section">Champs d'action</a>
+      <a href="#grille-images">Héros</a>
     </div>
   </div>
   
@@ -27,12 +28,27 @@
     </div>
   </div>
 
-  <div class="objectifs-section">
+  <div class="objectifs-section" id="objectifs-section">
     <h2>LES CHAMPS D'ACTION DU FOOTBALL</h2>
     <hr class="objectifs-hr">
     <p>
       Dans le cadre du développement durables, les footballeurs et les clubs de football ont décidé de mettre en place des actions locales dans les différentes écorégions 
       cruciales du globe en ciblant cinq objectifs globaux.
+    </p>
+    <p>
+      Le football, également appelé soccer dans certains pays, est le sport le plus populaire au monde. Il se joue 
+      généralement entre deux équipes de 11 joueurs sur un terrain rectangulaire avec un but à chaque extrémité. 
+      L'objectif est simple : marquer plus de buts que l'adversaire en faisant circuler un ballon principalement avec 
+      les pieds.
+    </p>
+    <p>
+      Né officiellement en Angleterre au XIXe siècle, le football s'est rapidement propagé à travers le monde, 
+      devenant bien plus qu'un simple jeu : une passion planétaire, un phénomène culturel, et un véritable langage 
+      universel. Des rues des favelas brésiliennes aux stades ultra-modernes européens, il unit les peuples, 
+      transcende les frontières, et déclenche des émotions intenses chez des milliards de fans.
+    </p>
+    <p>
+      Mais au-delà du spectacle et du divertissement, le football possède un potentiel immense pour transformer la société.
     </p>
     <p>
       Depuis l'adoption des 17 Objectifs de Développement Durable (ODD) par l'ONU en 2015, de nombreux secteurs ont 
@@ -63,7 +79,7 @@
     </div>
   </div>
 
-  <div class="grille-images">
+  <div class="grille-images" id="grille-images">
     <a href="messi.html" class="grille-item">
       <img src="../img/messi.png" alt="Messi">
       <span class="grille-texte">LIONEL MESSI</span>
@@ -84,35 +100,6 @@
     </a>
   </div>
 
-  <!-- Template pour la modale de droite -->
-  <template id="reduction-impot-modal-template">
-    <div class="modal-overlay">
-      <div class="modal-content">
-        <button class="modal-close">&times;</button>
-        <h2>Réduction d'impôt</h2>
-        <p>Saviez-vous que vos dons sont déductibles des impôts à hauteur de 66% ?</p>
-        <p>Par exemple, un don de 100€ ne vous coûte réellement que 34€ après déduction fiscale.</p>
-        <a href="../heritage/dons.html" class="modal-button">Faire un don</a>
-      </div>
-    </div>
-  </template>
-
-  <!-- Template pour la modale de gauche -->
-  <template id="deuxieme-modal-template">
-    <div class="modal-overlay-left">
-      <div class="modal-content">
-        <button class="modal-close">&times;</button>
-        <h2>Découvrez nos joueurs engagés</h2>
-        <p>Explorez les profils de Messi, Bellerin et Pedersen pour découvrir leur engagement dans le développement durable.</p>
-        <div class="modal-buttons">
-          <a href="messi.html" class="modal-button">Messi</a>
-          <a href="bellerin.html" class="modal-button">Bellerin</a>
-          <a href="pedersen.html" class="modal-button">Pedersen</a>
-        </div>
-      </div>
-    </div>
-  </template>
-
 <footer class="footer-global">
   <div class="footer-social">
     <h2>Rejoignez-nous Sur Les Réseaux Sociaux</h2>
@@ -129,8 +116,7 @@
     <div class="footer-col">
       <h3>Contact</h3>
       <ul>
-        <li><a href="#">À propos de nous</a></li>
-        <li><a href="#">Nous contacter</a></li>
+        <li><a href="../heriatge/à_propos.html">À propos de nous</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -141,6 +127,32 @@
     </div>
   </div>
 </footer>
+<div class="footer-copyright">
+  © 2025 Heritage
+</div>
+
+<template id="reduction-impot-modal-template">
+  <div class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3>Nous avons besoin de vous</h3>
+      <hr class="modal-hr">
+      <p>Aidez les organismes du football et du sport dans leurs actions pour le développement durable.</p>
+      <a href="../heritage/engager.html" class="modal-button">JE FAIS UN DON</a>
+    </div>
+  </div>
+</template>
+
+
+<template id="deuxieme-modal-template">
+  <div class="modal-overlay-left">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3>Intéresser ?</h3>
+      <p>Si vous voulez vous mettre à suivre l'actualité du football, <a href="https://www.lequipe.fr/Football/" target="_blank">cliquez ici</a>.</p>
+    </div>
+  </div>
+</template>
 
 <!-- Script pour les modales -->
 <script src="../js/accueil_modal.js"></script>
