@@ -170,16 +170,6 @@ footer {
   transition: filter 0.3s;
 }
 
-/* Style spécifique pour l'image de Bellerin */
-.grille-item img[alt="Hector Bellerin"] {
-  object-position: center 20%;
-}
-
-/* Style spécifique pour l'image de Pedersen */
-.grille-item img[alt="Sofie Pedersen"] {
-  object-position: center 30%;
-}
-
 .grille-item:hover img {
   filter: blur(2px) brightness(0.7);
 }
@@ -232,14 +222,17 @@ footer {
 .footer-icon {
   width: 48px;
   height: 48px;
-  opacity: 0.6;
-  transition: opacity 0.2s, transform 0.2s;
-  filter: grayscale(1);
+  opacity: 0.7;
+  filter: grayscale(1) brightness(0.7);
+  transition: opacity 0.2s, filter 0.2s, transform 0.2s;
 }
 .footer-icon:hover {
   opacity: 1;
-  filter: none;
+  filter: grayscale(1) brightness(0.5);
   transform: scale(1.1);
+}
+.footer-icons a {
+  color: inherit;
 }
 .footer-links {
   display: flex;
@@ -290,119 +283,143 @@ footer {
   }
 }
 
-.footer-button {
+.footer-copyright {
   text-align: center;
-  margin: 40px 0;
+  padding: 20px 0;
+  background: #000;
+  color: #fff;
+  font-size: 0.9em;
 }
 
-.odd-image {
-  max-width: 800px;
-  width: 90%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+/* --- Modal Réduction Impôts --- */
+.modal-overlay {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
+    display: none; /* Cachée par défaut */
+    /* Pas de fond opaque plein écran */
+    /* Pas de backdrop-filter */
+    /* Pas de display: flex/justify/align pour le centrage global */
 }
 
-.odd-image:hover {
-  transform: scale(1.02);
-}
-
-/* Styles pour les modales */
-.modal-overlay,
+/* --- Deuxième Modale (Gauche) --- */
 .modal-overlay-left {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
+    position: fixed;
+    bottom: 20px; /* Ou top: 20px; si tu préfères en haut à gauche */
+    left: 20px;
+    z-index: 2000;
+    display: none; /* Cachée par défaut */
+    /* Pas de fond opaque plein écran */
+    /* Pas de backdrop-filter */
+    /* Pas de display: flex/justify/align pour le centrage global */
 }
 
 .modal-content {
-  position: absolute;
-  background-color: #111;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  max-width: 400px;
-  width: 90%;
-  color: #fff;
-  text-align: center;
-}
-
-.modal-overlay .modal-content {
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-}
-
-.modal-overlay-left .modal-content {
-  top: 50%;
-  left: 30px;
-  transform: translateY(-50%);
+    background: #111; /* Utiliser la même couleur de fond que le body */
+    padding: 30px 40px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    width: 90%; /* Peut-être ajuster */
+    max-width: 400px; /* Peut-être ajuster */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: block;
 }
 
 .modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 5px 10px;
-  transition: color 0.3s;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #eee;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    transition: background 0.2s, color 0.2s;
 }
 
 .modal-close:hover {
-  color: #7fff00;
+    background: #ddd;
+    color: #555;
 }
 
-.modal-content h2 {
-  color: #7fff00;
-  margin-bottom: 20px;
-  font-size: 1.8em;
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    margin: -70px auto 20px auto; /* Pour la position au-dessus */
+    background: #111;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    
+}
+
+.modal-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: Arial, sans-serif; 
+}
+
+.modal-hr {
+    width: 60px;
+    border: none;
+    border-top: 2px solid #555;
+    margin: 0 auto 20px auto;
 }
 
 .modal-content p {
-  margin-bottom: 20px;
-  line-height: 1.5;
-  font-size: 1.1em;
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    color: #eee;
+}
+
+.modal-content p a {
+    color: #7fff00; /* Couleur initiale comme les liens du footer */
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+.modal-content p a:hover {
+    color: #fff; /* Couleur au survol (blanc) */
+    text-decoration: none;
 }
 
 .modal-button {
-  display: inline-block;
-  background: #4E8340;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-  margin: 10px;
-  transition: all 0.3s;
+    background: white; 
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
 }
 
 .modal-button:hover {
-  background: #7fff00;
-  color: #111;
-  transform: translateY(-2px);
+    background: #7fff00; 
+    color: #fff; 
 }
 
-.modal-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+.modal-small-text {
+    font-size: 0.9em;
+    margin-top: 20px;
+    color: #ccc; /* Texte gris clair */
 }
 
-@media (max-width: 768px) {
-  .modal-overlay .modal-content,
-  .modal-overlay-left .modal-content {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    right: auto;
-  }
-}
